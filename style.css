@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+#playBoard {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aiBoard,
+#playerBoard,
+#harbour {
+    margin: 20px;
+}
+
+
+#harbour {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 10vw;
+}
+
+.row {
+    display: flex;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.tileOccupied {
+    background-color: #555;
+}
+
+.ship {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.hit {
+    background-image: url(img/hit.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.miss {
+    background-image: url(img/miss.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#actionBoard {
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(93, 93, 107, 1) 96%);
+}
+
+button {
+    height: 10vh;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #ddd;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(109, 82, 117, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+button[disabled]:hover {
+    cursor: not-allowed;
+}
